@@ -1,4 +1,5 @@
 # Rainbow
-![rainbow.svg](rainbow.svg)
+![rainbow.gng](rainbow.png)
 
-RGB color slider that converts to hex values
+RGB color mixer and picker.  
+Go wild and see rgb turn to hex.

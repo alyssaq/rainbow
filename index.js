@@ -1,5 +1,5 @@
 ;(function (Ractive, window, document, drawShape, undefined) { 
-  console.log('loaded')
+
 function valueToHex(c) {
   var hex = c.toString(16);
   return hex.length == 1 ? '0' + hex : hex;
@@ -24,18 +24,9 @@ var ractive = new Ractive({
   }
 });
 
-function observeColor(color) {
-  ractive.observe( color+'_picker', function (newValue, oldValue, keypath) {
-    key = keypath.split('_')[0]
-    console.log( keypath + ' changed to ' + newValue + ' ' +key);
-    ractive.animate(key, newValue);
-
-  }, {'init': false});
-}
-
 ractive.observe('colors', function(oldVal, newVal) {
   drawShape(newVal.red, newVal.green, newVal.blue);
 });
-//['colors'].forEach(update_diagram);
+
 })(Ractive, window, document, drawShape);
 

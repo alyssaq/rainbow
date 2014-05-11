@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Rainbow</title>
+  <meta name="description" content="Have you even seen a double rainbow?">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="INDEX,FOLLOW" />
+
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta property="og:title" content="Rainbow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.github.com/alyssaq/rainbow" />
+  <meta property="og:image" content="/img/logo.png" />
+  <meta property="og:site_name" content="rainbow" />
+
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+
+  <style> 
+    .chart {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    .bar {
+
+    }
+    .red {
+      width: 100%;
+      background-color: red;
+    }
+    .green {
+      width: 80%;
+      background-color: green;
+    }
+    .blue {
+      width: 50%;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas" width="200" height="200"></canvas><br/>
+    
+
+  <div id="output"> </div>
+
+   <script id="template" type='text/ractive'>
+    <form onsubmit="return false" oninput="red.value = rval.valueAsNumber">
+      <label for="redRange">Red: </label>
+      <input name="rval" id="redRange" type="range" 
+        min="0" max="255" value={{colors.red}}> 
+      <output for="redRange" name="red">0</output> / 255
+      <input value={{colors.red}} id="red_number" type=number>
+    </form>
+
+    <form onsubmit="return false" oninput="green.value = rval.valueAsNumber">
+      <label for="greenRange">Green: </label>
+      <input name="rval" id="greenRange" type="range" 
+        min="0" max="255" value={{colors.green}}> 
+      <output  for="greenRange" name="green">0</output> / 255
+      <input value={{colors.green}} id="green_number" type=number>
+    </form>
+
+    <form onsubmit="return false" oninput="blue.value = bval.valueAsNumber">
+      <label for="blueRange">Blue: </label>
+      <input name="bval" id="blueRange" type="range" 
+        min="0" max="255" value={{colors.blue}}> 
+      <output for="blueRange" name="blue">0</output> / 255
+      <input value={{colors.blue}} id="blue_number" type=number>
+    </form>
+
+    <div class="chart" style="background-color: 
+            rgb({{Math.round(colors.red)}},
+            {{Math.round(colors.green)}},
+            {{Math.round(colors.blue)}})">
+      <div class="bar" 
+           style='background-color: #{{hex(colors.red)}}0000;
+                  width: {{colors.red * (100/255)}}%;' >
+        {{colors.red * (100/255)}}
+      </div>
+      <div class="bar" 
+           style='background-color: #00{{hex(colors.green)}}00;
+                  width: {{colors.green * (100/255)}}%;'>
+        {{colors.green * (100/255)}}
+      </div>
+      <div class="bar" 
+           style='background-color: #0000{{hex(colors.blue)}};
+                  width: {{colors.blue * (100/255)}}%;'>
+        {{colors.blue * (100/255)}}
+      </div>
+    </div>
+
+    <h4> Hex value: {{hex(Math.round(colors.red), Math.round(colors.green), Math.round(colors.blue))}} </h4>  
+  </script>
+<script src="shape.js"></script>  
+<script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

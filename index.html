@@ -19,64 +19,7 @@
 
   <link rel="icon" type="image/png" href="/img/favicon.png" />
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-
-  <style> 
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-    .chart {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-    }
-    .bar {
-
-    }
-    .row{
-      display: flex;
-      margin-bottom: 0.25em;
-    }
-    .row-label {
-      background-color: rgba(147,128,108,.1);
-    }
-    .row-field {
-    
-    }
-    .row-label:first-child, .row-field:first-child {
-      border-radius: 2px 0 0 2px;
-    }
-    .row-label, .row-field {
-      border: 1px solid rgba(147,128,108,.25);
-      padding: .5em .75em;
-      margin: 0;
-    }
-    .row-label:not(:first-child), 
-    .row-field:not(:first-child){
-      border-left: 0;
-    }
-    .row-label:last-child, .row-field:last-child {
-      border-radius: 0 2px 2px 0;
-    }
-    .color-label {
-      text-align: right;
-      width: 65px;
-    }
-    .percent-label {
-      width: 35px;
-    }
-    .val-label {
-      width: 75px;
-    }
-    .red {
-      background-color: rgb(230,0,0);
-    }
-    .green {
-      background-color: rgb(0,230,0);
-    }
-    .blue {
-      background-color: rgb(0,0,230);
-    }
-  </style>
+  <link href='site.css' rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -128,9 +71,9 @@
     </form>
 
     <div class="chart" style="background-color: 
-            rgb({{Math.round(colors.red)}},
-            {{Math.round(colors.green)}},
-            {{Math.round(colors.blue)}})">
+      rgb({{Math.round(colors.red)}},
+      {{Math.round(colors.green)}},
+      {{Math.round(colors.blue)}})">
       <div class="bar" 
            style='background-color: #{{hex(colors.red)}}0000;
                   width: {{colors.red * (100/255)}}%;' >

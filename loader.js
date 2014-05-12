@@ -1,5 +1,4 @@
 require.config({
-  baseUrl: '/js',
   deps: ['app'],
   paths: {
     ractive: [

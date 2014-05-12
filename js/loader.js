@@ -1,9 +1,10 @@
 require.config({
   baseUrl: '/js',
+  deps: ['app'],
   paths: {
     ractive: [
-      '//cdn.ractivejs.org/latest/ractive.min.js',
-      'ractive.min.js'
+      '//cdn.ractivejs.org/latest/ractive.min',
+      'ractive.min'
     ]
   },
   shim: {
@@ -11,4 +12,8 @@ require.config({
       exports: 'Ractive'
     }
   }
+});
+
+require(['shape'], function(shape) {
+  shape.draw(255,255,255);
 });

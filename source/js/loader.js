@@ -3,7 +3,7 @@ require.config({
   paths: {
     ractive: [
       '//cdn.ractivejs.org/latest/ractive.min',
-      'ractive.min'
+      '/js/libs/ractive.min'
     ],
     view: '../views',
     'amd-loader': '/js/plugins/amd-loader',

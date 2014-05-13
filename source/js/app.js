@@ -2,7 +2,7 @@ define(['ractive', 'shape', 'rv!view/main'],
 function(Ractive, shape, mainTemplate) {
   function valueToHex(c) {
     var hex = c.toString(16);
-    return hex.length == 1 ? '0' + hex : hex;
+    return hex.length === 1 ? '0' + hex : hex;
   }
 
   function rgbToHex(r, g, b) {
@@ -19,7 +19,7 @@ function(Ractive, shape, mainTemplate) {
         blue: 255
       },
       hex: function(r, g, b) {
-        return (arguments.length == 1) ? valueToHex(r) : rgbToHex(r, g, b);
+        return (arguments.length === 1) ? valueToHex(r) : rgbToHex(r, g, b);
       }
     }
   });

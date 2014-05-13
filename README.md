@@ -7,13 +7,19 @@
 RGB color mixer and picker.  
 Go wild and see rgb turn to hex.
 
+## Building
+
+1. Install [Node.js & NPM](http://nodejs.org/)
+1. Install [Grunt.js](https://github.com/gruntjs/grunt/wiki/Getting-started)
+1. Run `npm install` to fetch all build dependencies.
+
 ## Running
 
-From the `rainbow` folder, start a web server
-  
-    $ python -m SimpleHTTPServer 9999
+#### Development
 
-Open your brower at `http://localhost:9999` and play!
+1. Run `grunt dev`
+1. Open <http://localhost:9000/>
+
 
 ## Contributing
 1. Fork it!

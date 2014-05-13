@@ -1,0 +1,6 @@
+# Grunt
+publish
+
+# Javascript
+node_modules
+npm-debug.log

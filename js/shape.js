@@ -9,8 +9,14 @@ function () {
     var radius = 0.25 * width;
     var overlap = 0.1 * width;
     
-    canvas.style.border = "black 1px solid";
+    //canvas.style.border = 'black 1px solid';
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Big background circle
+    ctx.fillStyle = 'black';
+    ctx.beginPath();
+    ctx.arc(width/2,width/2, width/2, 0, Math.PI*2);
+    ctx.fill();
     
     // composite property to add color values
     ctx.globalCompositeOperation = 'lighter';
@@ -27,7 +33,7 @@ function () {
 
     ctx.fillStyle = 'rgb(0,0,'+b+')';
     ctx.beginPath();
-    ctx.arc(width*0.5, height*0.75 - overlap, radius, 0, Math.PI*2);
+    ctx.arc(width*0.5, height*0.8 - overlap, radius, 0, Math.PI*2);
     ctx.fill();
   }
 

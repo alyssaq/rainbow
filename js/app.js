@@ -1,5 +1,5 @@
-require(['ractive', 'shape'],
-function(Ractive, shape) {
+define(['ractive', 'shape', 'rv!view/main'],
+function(Ractive, shape, mainTemplate) {
   function valueToHex(c) {
     var hex = c.toString(16);
     return hex.length == 1 ? '0' + hex : hex;
@@ -11,7 +11,7 @@ function(Ractive, shape) {
 
   var ractive = new Ractive({
     el: 'output',
-    template: '#template',
+    template: mainTemplate,
     data: {
       colors : {
         red: 255,

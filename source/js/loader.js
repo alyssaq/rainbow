@@ -1,18 +1,14 @@
 require.config({
+  baseUrl: 'js/',
   deps: ['app'],
   paths: {
     ractive: [
       '//cdn.ractivejs.org/latest/ractive.min',
-      '/js/libs/ractive.min'
+      './libs/ractive.min'
     ],
     view: '../views',
-    'amd-loader': '/js/plugins/amd-loader',
-    rv: '/js/plugins/rv'
-  },
-  shim: {
-    ractive: {
-      exports: 'Ractive'
-    }
+    'amd-loader': './plugins/amd-loader',
+    rv: './plugins/rv'
   }
 });
 

@@ -20,6 +20,11 @@ Go wild and see rgb turn to hex.
 1. Run `grunt dev`
 1. Open <http://localhost:9000/>
 
+#### Production
+
+1. Run `grunt prod`
+1. Open <http://localhost:9002/>
+
 
 ## Contributing
 1. Fork it!

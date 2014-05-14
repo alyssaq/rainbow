@@ -6,6 +6,12 @@ module.exports = function (grunt) {
         port: 9000
       }
     },
+    staging: {
+      options: {
+        base: '<%= staging %>',
+        port: 9001
+      }
+    },
     production: {
       options: {
         base: '<%= production %>',

@@ -1,6 +1,10 @@
 module.exports = function (grunt) {
   grunt.registerTask('default', [
-    'jshint',
-    'publish'
+    'clean:production',
+    'cssmin',
+    'requirejs',
+    'filerev',
+    'copy:production',
+    'usemin'
   ]);
 };

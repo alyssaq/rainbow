@@ -4,6 +4,7 @@ module.exports = function (grunt) {
     config: {
       base: grunt.option('base') || process.cwd(),
       source: 'source',
+      staging: 'stage',
       production: 'publish'
     }
   });

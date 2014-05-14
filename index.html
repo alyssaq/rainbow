@@ -19,84 +19,19 @@
 
   <link rel="icon" type="image/png" href="/img/favicon.png" />
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <link href='site.css' rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.4/require.min.js" data-main="loader"></script>
+  <link href='/styles/site.7314f0c6.css' rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.4/require.min.js" data-main="/js/loader.3eaec3a6"></script>
 </head>
 
 <body>
-  <canvas id="canvas" width="200" height="200"></canvas><br/>
-
-  <div id="output"> </div>
-   <script id="template" type='text/ractive'>
-    <form class="row" onsubmit="return false" oninput="redout.value = rval.valueAsNumber">
-      <label class="red row-label color-label" for="redRange">Red </label>
-      <span class="row-field">
-        <input name="rval" id="redRange" type="range"
-          min="0" max="255" value={{colors.red}}> 
-      </span>
-      <span class="row-label percent-label">
-        {{Math.round(colors.red * (100/255))}}%
-      </span>
-      <span class="row-label val-label">
-        <output for="redRange" name="redout">255</output> / 255
-      </span>
-      <!-- <input value={{colors.red}} id="red_number" type=number>-->
-    </form>
-
-    <form class="row" onsubmit="return false" oninput="green.value = rval.valueAsNumber">
-      <label class="green row-label color-label" for="greenRange">Green </label>
-      <span class="row-field">
-        <input name="rval" id="greenRange" type="range"
-          min="0" max="255" value={{colors.green}}> 
-      </span>
-      <span class="row-label percent-label">
-        {{Math.round(colors.green * (100/255))}}%
-      </span>
-      <span class="row-label val-label">
-        <output for="greenRange" name="green">255</output> / 255
-      </span>
-    </form>
-
-    <form class="row" onsubmit="return false" oninput="blue.value = bval.valueAsNumber">
-      <label class="blue row-label color-label" for="blueRange">Blue </label>
-      <span class="row-field">
-        <input name="bval" id="blueRange" type="range" 
-          min="0" max="255" value={{colors.blue}}> 
-      </span>
-      <span class="row-label percent-label">
-        {{Math.round(colors.blue * (100/255))}}%
-      </span>
-      <span class="row-label val-label">
-        <output for="blueRange" name="blue">255</output> / 255
-      </span>
-    </form>
-
-    <div class="chart" style="background-color: 
-      rgb({{Math.round(colors.red)}},
-      {{Math.round(colors.green)}},
-      {{Math.round(colors.blue)}})">
-      <div class="bar" 
-           style='background-color: #{{hex(colors.red)}}0000;
-                  width: {{colors.red * (100/255)}}%;' >
-        {{colors.red * (100/255)}}
-      </div>
-      <div class="bar" 
-           style='background-color: #00{{hex(colors.green)}}00;
-                  width: {{colors.green * (100/255)}}%;'>
-        {{colors.green * (100/255)}}
-      </div>
-      <div class="bar" 
-           style='background-color: #0000{{hex(colors.blue)}};
-                  width: {{colors.blue * (100/255)}}%;'>
-        {{colors.blue * (100/255)}}
-      </div>
+  <div class="container">
+    <header class="row">
+      <h2> Rainbow - RGB/Hex</h2>
+    </header>
+    <div class="row">
+      <canvas id="canvas" width="220" height="220"></canvas>
     </div>
-
-    <h4> Hex value: {{hex(Math.round(colors.red), Math.round(colors.green), Math.round(colors.blue))}} </h4>  
-  </script>
-<!-- <script src="/js/shape.js"></script>  
-<script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
-<script src="/js/index.js"></script> -->
-
+    <div id="output"> </div>
+  </div>
 </body>
 </html>

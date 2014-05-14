@@ -1,6 +1,7 @@
 # Grunt
-publish
 .grunt
+publish
+ghpages
 
 # Javascript
 node_modules

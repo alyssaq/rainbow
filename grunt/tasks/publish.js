@@ -1,6 +1,10 @@
 module.exports = function (grunt) {
   grunt.registerTask('publish', [
     'default',
-    'gh-pages'
+    'copy:ghpages' 
+  ]);
+
+  grunt.registerTask('ghpages', [
+    'gh-pages' 
   ]);
 };

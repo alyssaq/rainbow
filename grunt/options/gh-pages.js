@@ -1,6 +1,6 @@
 module.exports = {
   options: {
-    base: '<%= production %>'
+    base: 'ghpages'
   },
   src: '**/*'
 }

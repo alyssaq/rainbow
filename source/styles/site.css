@@ -12,9 +12,6 @@ body {
   flex-direction: column;
   width: 50%;
 }
-.bar {
-
-}
 .row {
   display: flex;
   justify-content: center;
@@ -45,7 +42,7 @@ body {
   padding: .75em;
   margin: 0;
 }
-.row-label:not(:first-child), 
+.row-label:not(:first-child),
 .row-field:not(:first-child){
   border-left: 0;
 }
@@ -53,7 +50,7 @@ body {
   border-radius: 0 2px 2px 0;
 }
 .color-label {
-  
+
   text-align: right;
   width: 10%;
   order: 1;

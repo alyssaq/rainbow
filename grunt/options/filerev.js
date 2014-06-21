@@ -5,4 +5,4 @@ module.exports = {
   css: {
     src: '<%= production %>/**/*.css'
   }
-}
+};

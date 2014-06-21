@@ -26,6 +26,8 @@ function(Ractive, shape, mainTemplate) {
 
   ractive.observe('colors', function(oldVal, newVal) {
     shape.draw(newVal.red, newVal.green, newVal.blue);
+    document.querySelector('.color-result').style.backgroundColor =
+      'rgb(' + newVal.red + ',' + newVal.green + ',' + newVal.blue + ')'
   });
 
   return ractive;

@@ -3,4 +3,4 @@ module.exports = {
     base: 'ghpages'
   },
   src: '**/*'
-}
+};

@@ -40,4 +40,4 @@ Go wild and see rgb turn to hex.
 5. Submit a pull request :D
 
 ## License
-MIT
+[MIT](http://alyssaq.github.io/mit-license/)
